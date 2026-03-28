@@ -7,17 +7,17 @@ spring:
             - id: user-service
               uri: lb://USER-SERVICE
               predicates:
-                - path=/api/v1/users/**
+                - Path=/api/v1/users/**
 
             - id: book-service
               uri: lb://BOOK-SERVICE
               predicates:
-                - path=/api/v1/books/**
+                - Path=/api/v1/books/**
 
             - id: lending-service
               uri: lb://LENDING-SERVICE
               predicates:
-                - path=/api/v1/lendings/**
+                - Path=/api/v1/lendings/**
 
           default-filters:
             - PreserveHostHeader
